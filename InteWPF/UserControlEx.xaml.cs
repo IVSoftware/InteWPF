@@ -4,9 +4,6 @@ namespace InteWPF
 {
     public partial class UserControlEx : UserControl
     {
-        public UserControlEx()
-        {
-            InitializeComponent();
-        }
+        public UserControlEx() => InitializeComponent();
     }
 }

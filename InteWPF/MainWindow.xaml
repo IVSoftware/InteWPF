@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:InteWPF"
         xmlns:models="clr-namespace:InteWPF.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Width="500" Height="300">
+        WindowStartupLocation="CenterScreen"
+        Title="Main Window" Width="500" Height="300">
     <Window.DataContext>
         <models:MainWindowViewModel x:Name="Page"/>
     </Window.DataContext>
