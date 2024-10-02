@@ -1,0 +1,31 @@
+﻿<Window x:Class="InteWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InteWPF"
+        xmlns:models="clr-namespace:InteWPF.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Width="500" Height="300">
+    <Window.DataContext>
+        <models:MainWindowViewModel x:Name="Page"/>
+    </Window.DataContext>
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <local:UserControlEx 
+            Background="Azure"
+            Margin="10"
+            Grid.Row="0"
+            Visibility="{Binding SpectralPlotVisibility, ElementName=Page}"/>
+
+        <CheckBox Grid.Row="1"
+                    Content="IsSpectralPlotVisible"
+                    Margin="10"
+                    VerticalAlignment="Center"
+                    IsChecked="{Binding IsSpectralPlotVisible, UpdateSourceTrigger=PropertyChanged}" />
+    </Grid>
+</Window>
